@@ -1,51 +1,36 @@
 export default {
   commands: {
-    defaultPrefix: '!',
-    jobPrefix: '$'
+    defaultPrefix: '!'
   },
   automod: {
-    newAccountAge: '30',
-    joinCount: 10
-  },
-  strikes: {
-    muteLevels: {
-      1: '10m',
-      2: '1h'
-    }
+    newAccountAge: '30'
   },
   channels: {
-    archive: {
-      category: process.env.ARCHIVE_CATEGORY
-    },
-    automod: {
-      notifications: process.env.AUTOMOD_NOTIFICATION_CHANNEL
-    },
-    jobs: {
-      category: process.env.JOBS_CATEGORY,
-      permanentJobs: process.env.PERMANENT_JOBS_CHANNEL,
-      contractJobs: process.env.CONTRACT_JOBS_CHANNEL,
-      unpaidGigs: process.env.UNPAID_GIGS_CHANNEL,
-      hireFreelancer: process.env.HIRE_FREELANCER_CHANNEL,
-      hireStudio: process.env.HIRE_STUDIO_CHANNEL
-    },
     logs: {
-      memberLog: process.env.MEMBER_LOG_CHANNEL,
-      modLog: process.env.MOD_LOG_CHANNEL,
-      voiceLog: process.env.VOICE_LOG_CHANNEL
+      memberLog: process.env.MEMBER_LOG_CHANNEL
+    },
+    // custom
+    reactionRoles: {
+      channel: process.env.REACTION_ROLE_CHANNEL
     }
   },
   roles: {
-    moderator: process.env.MODERATOR_ROLE,
-    muted: process.env.MUTED_ROLE,
-    stream: process.env.STREAM_ROLE,
-    voice: process.env.VOICE_ROLE
+    moderator: process.env.MODERATOR_ROLE
   },
   meta: {
     links: {
-      github: 'https://github.com/unreal-slackers',
-      twitter: 'https://twitter.com/unrealslackers',
-      website: 'https://unrealslackers.org',
-      appeals: process.env.BAN_APPEALS_LINK
+      github: 'https://github.com/GASCompanion',
+      twitter: 'https://twitter.com/mklabs',
+      website: 'https://gascompanion.github.io'
     }
+  },
+
+  // custom
+  botId: process.env.BOT_ID,
+
+  // Key value pairs of emoji name with associated role name
+  emojis:{
+    cog: 'Foo',
+    gsc: 'Bar',
   }
 }

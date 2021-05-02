@@ -13,9 +13,10 @@ class MannyClient extends AkairoClient {
           'GUILDS',
           'GUILD_MEMBERS',
           'GUILD_BANS',
-          'GUILD_VOICE_STATES',
           'GUILD_PRESENCES',
           'GUILD_MESSAGES',
+          'GUILD_EMOJIS',
+          'GUILD_MESSAGE_REACTIONS',
           'DIRECT_MESSAGES'
         ]
       }
@@ -54,33 +55,6 @@ class MannyClient extends AkairoClient {
       duration: (message, phrase) => {
         if (!phrase) return null
         if (ms(phrase) !== undefined) return ms(phrase)
-        return null
-      },
-      infraction: async (message, phrase) => {
-        if (!phrase) return null
-
-        if (phrase.startsWith('#')) phrase = phrase.substr(1)
-
-        const record = await Case.findOne({
-          where: { id: phrase }
-        })
-
-        if (record) return record
-        return null
-      },
-      job: async (message, phrase) => {
-        if (!phrase) return null
-
-        const guild = this.guilds.cache.first()
-        const category = guild.channels.cache.get(config.channels.jobs.category)
-        for (const channel of category.children.values()) {
-          try {
-            return await channel.messages.fetch(phrase)
-          } catch (e) {
-            continue
-          }
-        }
-
         return null
       }
     })
