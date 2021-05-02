@@ -30,9 +30,9 @@ export default {
 
   // Key value pairs of emoji name with associated role name
   emojis:{
-    gsc: 'Foo',
-    targeted: 'Bar',
-    twitch: 'Bar'
+    gsc: 'Companion',
+    targeted: 'Targeter',
+    twitch: 'Twitcher'
   },
 
   emojiInfos :{
