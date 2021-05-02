@@ -30,7 +30,14 @@ export default {
 
   // Key value pairs of emoji name with associated role name
   emojis:{
-    cog: 'Foo',
-    gsc: 'Bar',
+    gsc: 'Foo',
+    targeted: 'Bar',
+    twitch: 'Bar'
+  },
+
+  emojiInfos :{
+    gsc: 'To receive notifications about GAS Companion',
+    targeted: 'To receive notifications about Target System Plugin',
+    twitch: 'To receive alerts for when I go live on twitch'
   }
 }

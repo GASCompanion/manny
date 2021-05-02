@@ -44,11 +44,14 @@ class GameIdeaCommand extends Command {
       'A {style:a} {genre:an} where you {verb} {supernatural:singular} in {setting:in}, but {diversifier}.'
     ]
 
-    if (message.channel.type !== 'dm') {
-      message.delete()
-    }
+    return message.reply(generate(_.randomElement(templates)))
 
-    return message.author.send(generate(_.randomElement(templates)))
+
+    // if (message.channel.type !== 'dm') {
+    //   message.delete()
+    // }
+
+    // return message.author.send(generate(_.randomElement(templates)))
   }
 }
 
