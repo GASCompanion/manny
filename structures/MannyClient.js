@@ -19,7 +19,9 @@ class MannyClient extends AkairoClient {
           'GUILD_MESSAGE_REACTIONS',
           'DIRECT_MESSAGES'
         ]
-      }
+      },
+
+      partials: ['MESSAGE', 'REACTION']
     })
 
     this.commandHandler = new CommandHandler(this, {
