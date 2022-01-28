@@ -27,17 +27,20 @@ export default {
 
   // custom
   botId: process.env.BOT_ID,
+  reactionRoleMessageId: process.env.REACTION_ROLE_MESSAGE,
 
   // Key value pairs of emoji name with associated role name
   emojis:{
     gsc: 'Companion',
     targeted: 'Targeter',
-    twitch: 'Twitcher'
+    combograph: 'Combo Grapher',
+    // twitch: 'Twitcher',
   },
 
   emojiInfos :{
-    gsc: 'To receive notifications about GAS Companion',
+    gsc: 'To receive notifications about GAS Companion Plugin',
     targeted: 'To receive notifications about Target System Plugin',
-    twitch: 'To receive alerts for when I go live on twitch'
+    combograph: 'To receive notifications about Combo Graph Plugin',
+    // twitch: 'To receive alerts for when I go live on twitch',
   }
 }
